@@ -32,4 +32,5 @@ resource "azurerm_virtual_network" "linuxtestvm" {
     name           = "servers"
     address_prefix = "10.0.0.0/24"
   }
+  tags = var.tags
 }
