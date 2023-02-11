@@ -39,7 +39,7 @@ resource "azurerm_virtual_network" "linuxtestvm" {
 }
 
 resource "azurerm_network_security_group" "ssh" {
-  name                = "nsg-sshallow-001"
+  name                = "nsg-ssh-allow-001"
   resource_group_name = azurerm_resource_group.linuxtestvm.name
   location            = azurerm_resource_group.linuxtestvm.location
 
