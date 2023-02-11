@@ -28,9 +28,9 @@ resource "azurerm_virtual_network" "linuxtestvm" {
   resource_group_name = azurerm_resource_group.linuxtestvm.name
   location            = azurerm_resource_group.linuxtestvm.location
   address_space       = ["10.0.0.0/16"]
-  subnet = [{
+  subnet {
     name           = "snet-servers"
     address_prefix = "10.0.0.0/24"
-  }]
+  }
   tags = var.tags
 }
