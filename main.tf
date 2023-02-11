@@ -31,6 +31,7 @@ resource "azurerm_virtual_network" "linuxtestvm" {
   subnet {
     name           = "snet-servers"
     address_prefix = "10.0.0.0/24"
+    security_group = azurerm_network_security_group.ssh.id
   }
 
   tags = var.tags
