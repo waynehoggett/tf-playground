@@ -18,6 +18,6 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "linuxtestvm" {
-  name = "rg-linuxtestvm-dev-001"
+  name     = "rg-linuxtestvm-dev-001"
   location = "Australia East"
 }
