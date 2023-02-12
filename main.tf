@@ -100,7 +100,7 @@ resource "azurerm_linux_virtual_machine" "uvm1" {
   location                        = azurerm_resource_group.linuxtestvm.location
   size                            = "Standard_F2"
   admin_username                  = "adminuser"
-  admin_password                  = data.azurerm_key_vault_secret.vmPassword
+  admin_password                  = data.azurerm_key_vault_secret.vmPassword.value
   disable_password_authentication = false
   network_interface_ids = [
     azurerm_network_interface.nic-dev-uvm1.id,
